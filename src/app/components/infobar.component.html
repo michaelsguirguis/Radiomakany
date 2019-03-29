@@ -1,0 +1,47 @@
+<div #self style="padding-top:5px;" class="info-bar">
+	<a
+		type="button"
+		class="button-cascade"
+		style="padding-bottom:3.75%;"
+		(click)="actionLogin()"
+		*ngIf="!stateService.getIsUserLogged() && !stateService.getShowLogin() && !stateService.getShowRegister()"
+		>Login
+	</a>
+	<a
+		type="button"
+		class="button-cascade"
+		style="padding-bottom:3.75%;margin-top:5px;"
+		(click)="actionRegister()"
+		*ngIf="!stateService.getIsUserLogged() && !stateService.getShowLogin() && !stateService.getShowRegister()"
+		>Register</a
+	>
+	<div style="margin-top:5px;;padding-bottom:3.75%;">
+		<img src="../../assets/logo.jpeg" *ngIf="!showLogin && !showRegister" />
+	</div>
+	<div
+		*ngIf="!stateService.getIsUserLogged() &&  !stateService.getShowLogin() && !stateService.getShowRegister()"
+		style="margin-bottom:2px;margin-top:-0.5rem;margin-left:1vw;margin-right:1vw;"
+	>
+		<a>
+			<img
+				class="size-fit"
+				src="../../assets/social_fb.png"
+				style="width:4vw;"
+			/>
+		</a>
+		<a>
+			<img
+				class="size-fit"
+				src="../../assets/social_twitter.png"
+				style="width:4vw;"
+			/>
+		</a>
+		<a>
+			<img
+				class="size-fit"
+				src="../../assets/social_instagram.png"
+				style="width:4vw;"
+			/>
+		</a>
+	</div>
+</div>

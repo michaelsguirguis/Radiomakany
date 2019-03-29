@@ -1,0 +1,15 @@
+.row {
+	display: flex;
+}
+
+.column-7 {
+	flex: 70%;
+}
+
+.column-3 {
+	flex: 30%;
+}
+
+.column {
+	flex: 50%;
+}
