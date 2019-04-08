@@ -1,0 +1,73 @@
+<div fxLayout="column" fxLayoutGap="15px" fxLayoutAlign="start stretch">
+  <div fxFlex="1 1 50%" id="main-carousel">
+    <div id="carouselIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li
+          data-target="#carouselIndicators"
+          data-slide-to="0"
+          class="active"
+        ></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="../../assets/Website Carousel.jpg"
+            class="d-block w-100"
+            alt="..."
+          />
+        </div>
+      </div>
+
+    </div>
+    <div class="panel-item" style="right:0;z-index:2; margin:0; padding:0;">
+      <nav class="navbar">
+        <button
+          (click)="toggleMenu()"
+          class="navbar-toggler navbar-dark"
+          type="button"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+
+    <div
+      class="panel-item p-4 btn-main"
+      [style.visibility]="showMenu ? 'visible' : 'hidden'"
+      style="top:0.5em;right:5em;width:24%;"
+    ></div>
+
+    <app-slide
+      #slidecomponent
+      class="panel-item"
+      style="top: 0px;padding-bottom:3.75%;display:block;"
+      [direction]="infobarSlideDirection"
+      style="width:17vw;height:32vw;padding-bottom: 3.75%"
+    >
+      <div id="info-bar" *ngIf="stateService.isInfobarVisible">
+        <app-info-bar (toogleInfobarEvent)="toglleInfobar()"></app-info-bar>
+      </div>
+    </app-slide>
+
+    <div id="membership" *ngIf="!stateService.isInfobarVisible">
+      <app-user (toggleMembershipEvent)="toglleInfobar()"></app-user>
+    </div>
+  </div>
+  <div
+    fxFlex="1 1 auto"
+    class="jumbotron body-text"
+    style="color:indigo;float:left;clear:left;border-left:4px solid indigo;border-right:4px solid indigo;padding-top:5%;padding-bottom:3%;margin-top:1%;border-radius: 20px 20px 20px 20px"
+  >
+    <h6 style="text-align:center;">
+      Hi, we'd like to introduce you to a new broadcasting concept. An idea that
+      has never been done before. We would love to introduce you to<b
+        >... Radio Makany!</b
+      ><br /><br />
+      Radio Makany is a radio station going around Egypt, and maybe even around
+      the world! We also do sponsors and advertisement at competitive price
+      points never seen before! So,<br /><br />
+    </h6>
+
+    <h4 style="text-align:center;">What's holding you back?!</h4>
+  </div>
+</div>

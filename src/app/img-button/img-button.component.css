@@ -1,0 +1,32 @@
+.btn-box {
+  width: 100%;
+  position: relative;
+  padding-left: 2px;
+  z-index: 1000;
+}
+
+a {
+  cursor: pointer;
+}
+
+.img-part {
+  border-right: 1px solid white;
+  padding-right: 2px;
+}
+
+.img-part > img {
+  object-fit: fill;
+}
+
+.txt-part {
+  font-size: 1.2vw;
+  text-align: center;
+  color: whitesmoke;
+  object-fit: fill;
+}
+
+span {
+  display: inline;
+  vertical-align: middle;
+  line-height: normal;
+}

@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+
+.form-container {
+  object-fit: fill;
+  width:100%;
+  height: 80%;
+  padding: 15px;
+  margin: auto;
+}
+
+.left-part {
+  border-right: 1px solid darkslateblue;
+}
+
+.field-container {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.field-container > * {
+  width: 100%;
+  padding-right:15px;
+  padding-left: 15px;
+  padding-top: 5px;
+}
+
+.component-container {
+  background-color: white;
+  border-left: 2px solid orangered;
+  border-right: 2px solid orangered;
+  border-bottom: 2px solid orangered;
+  border-radius: 0px 0px 20px 20px;
+  left: calc(17vw * 0.65);
+  top: 0;
+  height:32vw;
+  width:74vw;
+  z-index:2;
+  padding: 1%;
+  margin:auto;
+}

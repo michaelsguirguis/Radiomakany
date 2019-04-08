@@ -1,0 +1,15 @@
+<a class="btn btn-box" style="background-color: transparent;" (click)="fireClickEvent()">
+  <div fxLayout="row" fxLayoutGap="2%" fxLayoutAlign="center center" [style.background-color]="backColor">
+    <div [fxFlex]="imgScale === 'small'? '30%' : imgScale === 'medium' ? '40%' : '50%'">
+        <div class="img-part">
+            <img [src]="btnImage" style="width:100%;object-fit: fill;" >
+          </div>
+    </div>
+    <div [fxFlex]="imgScale === 'small'? '70%' : imgScale === 'medium' ? '60%' : '50%'">
+        <div class="txt-part">
+            <span>{{ btnText }}</span>
+          </div>
+    </div>
+  </div>
+</a>
+

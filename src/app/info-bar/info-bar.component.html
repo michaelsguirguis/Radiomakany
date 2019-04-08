@@ -1,0 +1,26 @@
+<div fxLayout="column" fxLayoutAlign="space-evenly senter" class="slide-bar">
+  <div fxFlex="auto" *ngIf="!stateService.isUserLogged || !stateService.isEmailVerified">
+    <app-img-button
+    [btnText]="'Login|Register'"
+    [btnImage]="'https://cdn2.iconfinder.com/data/icons/dellipack/256/people.png'"
+    [imgScale]="'medium'"
+    [backColor]="'transparent'"
+    (clickEvent)="hide()"></app-img-button>
+  </div>
+  <div fxFlex="auto" *ngIf="stateService.isUserLogged && stateService.isEmailVerified">
+          <div class="user-text">
+              <h6>Hi {{userStoreService.getLoggedUser().fullName}}</h6>
+          </div>
+          <div class="user-text" style="margin-top:-1vh;margin-bottom:1vh;">
+              <button mat-link-button style="font-size:1.3vw;" (click)="userStoreService.signOut()">Sign out</button>
+          </div>
+
+  </div>
+
+  <div fxFlex="auto" >
+      <img src="../../assets/logo.jpg" style="object-fit: fill;max-width:100%;">
+  </div>
+  <div fxFlex="1 1 33.3%" style="margin:auto;">
+      <app-social-button [count]="5"></app-social-button>
+  </div>
+</div>

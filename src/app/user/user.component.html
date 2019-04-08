@@ -1,0 +1,12 @@
+<div #el_container class="component-container">
+  <app-resize [scaleX]="horizontalScale" [scaleY]="verticalScale">
+    <mat-tab-group #el_forms mat-stretch-tabs (selectedTabChange)="resize()">
+      <mat-tab label="Sign In">
+        <app-login (toggleMembershipEvent)="hide()"></app-login>
+      </mat-tab>
+      <mat-tab label="Register">
+        <app-register (toggleMembershipEvent)="hide()"></app-register>
+      </mat-tab>
+    </mat-tab-group>
+  </app-resize>
+</div>

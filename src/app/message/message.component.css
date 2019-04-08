@@ -1,0 +1,21 @@
+.text {
+  padding: 5px;
+  font-size: 2vw;
+}
+
+
+
+.header {
+  font-size: 3vw;
+  font-weight: bold;
+  border-radius:0 0 10px 10px;
+  padding: 5px;
+  background: rgba(255,222,184,1);
+  background: -moz-linear-gradient(left, rgba(255,222,184,1) 0%, rgba(255,89,0,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(255,222,184,1)), color-stop(100%, rgba(255,89,0,1)));
+  background: -webkit-linear-gradient(left, rgba(255,222,184,1) 0%, rgba(255,89,0,1) 100%);
+  background: -o-linear-gradient(left, rgba(255,222,184,1) 0%, rgba(255,89,0,1) 100%);
+  background: -ms-linear-gradient(left, rgba(255,222,184,1) 0%, rgba(255,89,0,1) 100%);
+  background: linear-gradient(to right, rgba(255,222,184,1) 0%, rgba(255,89,0,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffdeb8', endColorstr='#ff5900', GradientType=1 );
+}

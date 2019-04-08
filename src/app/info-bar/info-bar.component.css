@@ -1,0 +1,39 @@
+.slide-bar {
+  background-color: orangered;
+  border-right: 2px solid white;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  border-radius: 0px 0px 15px 15px;
+  width: 15vw;
+  max-height: auto;
+  height: auto;
+  padding-top: 1%;
+  padding-bottom: 15px;
+  position: absolute;
+}
+
+.user-part {
+  margin-top:1%;
+}
+
+.link-text {
+  font-size: 1.4vw;
+  font-weight: normal;
+  color: whitesmoke;
+  margin: 0;
+  padding: 0;
+}
+
+h6 {
+  padding-top:1vh;
+  font-size: 1.6vw;
+}
+
+h5 {
+  font-size: 1.8vw;
+}
+.user-text {
+  color: white;
+  text-align: center;
+  margin:auto;
+}

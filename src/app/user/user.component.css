@@ -1,0 +1,15 @@
+.component-container {
+  position: relative;
+  background-color: white;
+  border-left: 2px solid orangered;
+  border-right: 2px solid orangered;
+  border-bottom: 2px solid orangered;
+  border-radius: 0px 0px 20px 20px;
+  top: 0;
+  left: 12vw;
+  height:32vw;
+  width:74vw;
+  z-index:2;
+  padding: 1%;
+  margin:auto;
+}

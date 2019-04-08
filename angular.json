@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Radiomakany": {
+    "radiomakany": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Radiomakany",
+            "outputPath": "dist/radiomakany",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Radiomakany:build"
+            "browserTarget": "radiomakany:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Radiomakany:build:production"
+              "browserTarget": "radiomakany:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Radiomakany:build"
+            "browserTarget": "radiomakany:build"
           }
         },
         "test": {
@@ -103,7 +103,7 @@
         }
       }
     },
-    "Radiomakany-e2e": {
+    "radiomakany-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +112,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Radiomakany:serve"
+            "devServerTarget": "radiomakany:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Radiomakany:serve:production"
+              "devServerTarget": "radiomakany:serve:production"
             }
           }
         },
@@ -132,5 +132,5 @@
       }
     }
   },
-  "defaultProject": "Radiomakany"
+  "defaultProject": "radiomakany"
 }

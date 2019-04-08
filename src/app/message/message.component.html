@@ -1,0 +1,29 @@
+<div mat-dialog-title>
+  <div class="header" fxLayout="row" fxLayout.xs="column" fxLayoutALign="space-evenly center">
+      <div fxFlex="1 1 10%">
+          <img src="../../favicon.ico" style="object-fit: fill;">
+      </div>
+      <div fxFlex="1 1 90%">
+          <div fxLayout="row" fxLayoutAlign="space-between center">
+            <div fxFlex="65%">
+                Radio Makany
+            </div>
+            <div fxFlex="35%" style="align-content: flex-start">
+                <label style="font-size: small">{{data.title}}</label>
+            </div>
+          </div>
+      </div>
+  </div>
+
+</div>
+<div mat-dialog-content >
+  <div class="text" [innerHTML]="data.message"></div>
+  <div *ngIf="data.useButtons" fxLayout="row" fxLayoutAlign="center center">
+    <button *ngIf="data.allowSendVerificationEmail" mat-button (click)="fireSendVerificationEmail()">resend email</button>
+  </div>
+</div>
+<div mat-dialog-actions>
+  <div>
+      <button mat-flat-button cdkFocusInitial [color]="data.matButtonColor" (click)="close()">{{data.closeButtonText}}</button>
+  </div>
+</div>

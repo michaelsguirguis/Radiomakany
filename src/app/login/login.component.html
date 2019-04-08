@@ -1,0 +1,92 @@
+<form [formGroup]="loginForm" (submit)="doLoginAsync()">
+<div  class="container" fxLayout="column" fxLayoutAlign="space-evenly stretch">
+  <div fxFlex="1 1 75%">
+    <div fxLayout="row" fxLayoutAlign="space-evenly stretch">
+      <div fxFlex="1 1 100%" class="form-part" >
+        <div
+          fxLayout="column"
+          fxLayoutAlign="start stretch"
+          class="field-container"
+        >
+          <mat-form-field class="field">
+            <input
+              type="email"
+              matInput
+              placeholder="Email"
+              formControlName="emailControl"
+              id="emailControl"
+            />
+            <mat-error
+              *ngIf="
+                loginForm.get('emailControl').hasError('email') &&
+                !loginForm.get('emailControl').hasError('required')
+              "
+            >
+              Please enter a valid email address
+            </mat-error>
+            <mat-error
+              *ngIf="loginForm.get('emailControl').hasError('required')"
+            >
+              Email is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="field">
+            <input
+              matInput
+              type="password"
+              placeholder="Password"
+              formControlName="passwordControl"
+              id="passwordControl"
+            />
+            <mat-error
+              *ngIf="loginForm.get('passwordControl').hasError('minLength')"
+            >
+              Password is less than 6 characters
+            </mat-error>
+            <mat-error
+              *ngIf="loginForm.get('passwordControl').hasError('required')"
+            >
+              Password is <strong>required</strong>
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div fxFlex="1 1 25%">
+    <div fxFlexlayout="row" fxLayoutGap="2rem">
+      <div fxFlex="1 1 50%">
+        <div fxLayout="row" fxLayoutAlign="end center">
+          <div fxFlex="0 0 50%"></div>
+          <div fxFlex="1 1 50%">
+            <button
+              type="submit"
+              mat-raised-button
+              color="primary"
+              style="min-width:5rem;"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+      </div>
+      <div fxFlex="1 1 50%">
+        <div fxLayout="row" fxLayoutAlign="start center">
+          <div fxFlex="0 0 5%"></div>
+          <div fxFlex="1 1 95%">
+            <button
+              type="button"
+              mat-raised-button
+              color="warn"
+              style="min-width:5rem;"
+              (click)="hide()"
+            >
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</form>

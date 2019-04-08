@@ -1,0 +1,34 @@
+@media screen and (min-width: 400px) {
+  div.desktop-tablet {
+    display: none;
+  }
+}
+
+.form-container {
+  object-fit: fill;
+  width:100%;
+  height: 80%;
+  padding: 15px;
+  margin: auto;
+  position: relative;
+}
+
+.field {
+  object-fit: fill;
+}
+
+.left-part {
+  border-right: 1px solid darkslateblue;
+}
+
+.field-container {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.field-container > * {
+  width: 100%;
+  padding-right:15px;
+  padding-left: 15px;
+  padding-top: 5px;
+}

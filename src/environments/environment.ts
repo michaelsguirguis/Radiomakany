@@ -3,8 +3,17 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebaseConfig: {
+    apiKey: 'AIzaSyAN6QLqYvCXNHOfqOrBxzb_1dGbKWF33uE',
+    authDomain: 'radiomakany-293b7.firebaseapp.com',
+    databaseURL: 'https://radiomakany-293b7.firebaseio.com',
+    projectId: 'radiomakany-293b7',
+    storageBucket: 'radiomakany-293b7.appspot.com',
+    messagingSenderId: '208850307117'
+  }
 };
+
 
 /*
  * For easier debugging in development mode, you can import the following file
